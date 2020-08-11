@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Tanay | Developer & Designer`,
+    title: `Tanay Nistala`,
     description: `I'm a developer, designer, roboticist, photographer, and a whole lot more`,
-    author: `Tanay Nistala | tanay.io`,
+    author: `Tanay Nistala | tanaynistala.vercel.app`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -39,7 +39,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/oscar-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     // https://www.gatsbyjs.org/packages/gatsby-plugin-google-analytics/
