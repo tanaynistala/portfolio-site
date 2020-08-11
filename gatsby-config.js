@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Prist | Gatsby & Prismic Starter`,
-        description: `A starter powered by Gatsby and Prismic to showcase portfolios and blogs.`,
-    author: `Marguerite Roth | marguerite.io`,
+    title: `Tanay | Developer & Designer`,
+    description: `I'm a developer, designer, roboticist, photographer, and a whole lot more`,
+    author: `Tanay Nistala | tanay.io`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,17 +24,17 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-        resolve: 'gatsby-source-prismic-graphql',
+        resolve: '@prismicio/gatsby-source-prismic-graphql',
         options: {
-            repositoryName: 'prist', // (REQUIRED, replace with your own)
+            repositoryName: 'tanay-nistala', // (REQUIRED, replace with your own)
             linkResolver: () => post => `/${post.uid}`,
         }
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-prismic-starter-prist`,
-        short_name: `prist`,
+        name: `Tanay Nistala`,
+        short_name: `tanay`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

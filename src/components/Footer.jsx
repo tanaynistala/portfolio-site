@@ -53,8 +53,8 @@ const Footer = () => (
         <Link to="/">
             <Logo />
         </Link>
-        <FooterAuthor href="https://www.marguerite.io/?utm_source=prist&utm_medium=footer&utm_campaign=prist_starter">
-            © 2019 — Designed & developed by Marguerite Roth
+        <FooterAuthor href="https://tanaynistala.io">
+            © 2020 — Tanay Nistala
             <FooterSpooch className="FooterSpooch" src={spooch} />
         </FooterAuthor>
     </FooterContainer>
