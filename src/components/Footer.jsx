@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import styled from "@emotion/styled";
 import colors from "styles/colors";
 import Logo from "components/_ui/Logo";
-import FooterIcon from "images/icon.png"
+import spooch from "images/icon.png"
 
 const FooterContainer = styled("div")`
     padding-top: 3.75em;
@@ -29,7 +29,7 @@ const FooterAuthor = styled("a")`
      &:hover {
          color: ${colors.blue900};
 
-        .FooterLogo {
+        .FooterSpooch {
             animation-name: rotate;
             animation-duration: 1.5s;
             animation-iteration-count: infinite;
@@ -43,7 +43,7 @@ const FooterAuthor = styled("a")`
     }
 `
 
-const FooterLogo = styled("img")`
+const FooterSpooch = styled("img")`
     max-width: 33px;
     margin-top: 0.25em;
 `
@@ -53,9 +53,9 @@ const Footer = () => (
         <Link to="/">
             <Logo />
         </Link>
-        <FooterAuthor href="https://tanaynistala.io">
-            © 2020 — Tanay Nistala
-            <FooterLogo className="FooterLogo" src={FooterIcon} />
+        <FooterAuthor href="http://tanaynistala.vercel.app">
+            © 2019 — Tanay Nistala
+            <FooterSpooch className="FooterSpooch" src={spooch} />
         </FooterAuthor>
     </FooterContainer>
 )

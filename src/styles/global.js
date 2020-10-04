@@ -35,11 +35,6 @@ const globalStyles = css`
         }
     }
 
-    a {
-        color: ${colors.blue500};
-        text-decoration: none;
-    }
-
     /*
     A workaround for forcing accessibility wrappers
     to have a 100% height.

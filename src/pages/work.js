@@ -11,64 +11,62 @@ const WorkTitle = styled("h1")`
 `
 
 const Work = ({ projects, meta }) => (
-    <>
-        <Helmet
-            title={`Work | ${meta.title}`}
-            titleTemplate={`%s`}
-            meta={[
-                {
-                    name: `description`,
-                    content: meta.description,
-                },
-                {
-                    property: `og:title`,
-                    content: `Work | ${meta.title}`,
-                },
-                {
-                    property: `og:description`,
-                    content: meta.description,
-                },
-                {
-                    property: `og:type`,
-                    content: `website`,
-                },
-                {
-                    name: `twitter:card`,
-                    content: `summary`,
-                },
-                {
-                    name: `twitter:creator`,
-                    content: meta.author,
-                },
-                {
-                    name: `twitter:title`,
-                    content: meta.title,
-                },
-                {
-                    name: `twitter:description`,
-                    content: meta.description,
-                },
-            ].concat(meta)}
-        />
-        <Layout>
-            <WorkTitle>
-                Work
-            </WorkTitle>
-            <>
-                {projects.map((project, i) => (
-                    <ProjectCard
-                        key={i}
-                        category={project.node.project_category}
-                        title={project.node.project_title}
-                        description={project.node.project_preview_description}
-                        thumbnail={project.node.project_preview_thumbnail}
-                        uid={project.node._meta.uid}
-                    />
-                ))}
-            </>
-        </Layout>
-    </>
-);
+  <>
+    <Helmet
+      title={`Work`}
+      titleTemplate={`%s | Tanay Nistala`}
+      meta={[
+        {
+          name: `description`,
+          content: meta.description,
+        },
+        {
+          property: `og:title`,
+          content: `Work | Tanay Nistala`,
+        },
+        {
+          property: `og:description`,
+          content: meta.description,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          name: `twitter:card`,
+          content: `summary`,
+        },
+        {
+          name: `twitter:creator`,
+          content: meta.author,
+        },
+        {
+          name: `twitter:title`,
+          content: meta.title,
+        },
+        {
+          name: `twitter:description`,
+          content: meta.description,
+        },
+      ].concat(meta)}
+    />
+    <Layout>
+      <WorkTitle>Work</WorkTitle>
+      <>
+        {projects.map((project, i) => (
+          <ProjectCard
+            key={i}
+            category={project.node.project_category}
+            title={project.node.project_title}
+            description={project.node.project_preview_description}
+            thumbnail={project.node.project_preview_thumbnail}
+            uid={project.node._meta.uid}
+          />
+        ))}
+      </>
+    </Layout>
+  </>
+)
 
 export default ({ data }) => {
     const projects = data.prismic.allProjects.edges;

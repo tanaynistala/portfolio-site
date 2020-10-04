@@ -28,65 +28,63 @@ const BlogGrid = styled("div")`
 `
 
 const Blog = ({ posts, meta }) => (
-    <>
-        <Helmet
-            title={`Blog | ${meta.title}`}
-            titleTemplate={`%s`}
-            meta={[
-                {
-                    name: `description`,
-                    content: meta.description,
-                },
-                {
-                    property: `og:title`,
-                    content: `Blog | Tanay Nistala`,
-                },
-                {
-                    property: `og:description`,
-                    content: meta.description,
-                },
-                {
-                    property: `og:type`,
-                    content: `website`,
-                },
-                {
-                    name: `twitter:card`,
-                    content: `summary`,
-                },
-                {
-                    name: `twitter:creator`,
-                    content: meta.author,
-                },
-                {
-                    name: `twitter:title`,
-                    content: meta.title,
-                },
-                {
-                    name: `twitter:description`,
-                    content: meta.description,
-                },
-            ].concat(meta)}
-        />
-        <Layout>
-            <BlogTitle>
-                Blog
-            </BlogTitle>
-            <BlogGrid>
-                {posts.map((post, i) => (
-                    <PostCard
-                        key={i}
-                        author={post.node.post_author}
-                        category={post.node.post_category}
-                        title={post.node.post_title}
-                        date={post.node.post_date}
-                        description={post.node.post_preview_description}
-                        uid={post.node._meta.uid}
-                    />
-                ))}
-            </BlogGrid>
-        </Layout>
-    </>
-);
+  <>
+    <Helmet
+      title={`Blog`}
+      titleTemplate={`%s | Tanay Nistala`}
+      meta={[
+        {
+          name: `description`,
+          content: meta.description,
+        },
+        {
+          property: `og:title`,
+          content: `Blog | Tanay Nistala`,
+        },
+        {
+          property: `og:description`,
+          content: meta.description,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          name: `twitter:card`,
+          content: `summary`,
+        },
+        {
+          name: `twitter:creator`,
+          content: meta.author,
+        },
+        {
+          name: `twitter:title`,
+          content: meta.title,
+        },
+        {
+          name: `twitter:description`,
+          content: meta.description,
+        },
+      ].concat(meta)}
+    />
+    <Layout>
+      <BlogTitle>Blog</BlogTitle>
+      <BlogGrid>
+        {posts.map((post, i) => (
+          <PostCard
+            key={i}
+            author={post.node.post_author}
+            category={post.node.post_category}
+            title={post.node.post_title}
+            date={post.node.post_date}
+            description={post.node.post_preview_description}
+            uid={post.node._meta.uid}
+          />
+        ))}
+      </BlogGrid>
+    </Layout>
+  </>
+)
 
 export default ({ data }) => {
     const posts = data.prismic.allPosts.edges;
