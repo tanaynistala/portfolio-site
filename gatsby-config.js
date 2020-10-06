@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Tanay Nistala`,
     description: `iOS & Web Developer, Roboticist, Photographer, and a whole lot more`,
-    author: `Tanay Nistala | tanaynistala.vercel.app`,
+    author: `Tanay Nistala | tanaynistala.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
