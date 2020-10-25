@@ -214,7 +214,7 @@ export const query = graphql`
                     }
                 }
             }
-            allProjects {
+            allProjects(sortBy: meta_firstPublicationDate_DESC) {
                 edges {
                     node {
                         project_title
