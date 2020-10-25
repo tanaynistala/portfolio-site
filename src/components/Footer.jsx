@@ -45,7 +45,7 @@ const FooterAuthor = styled("a")`
 
 const FooterSpooch = styled("img")`
     max-width: 33px;
-    margin-top: 0.25em;
+    margin-top: 0.5em;
 `
 
 const Footer = () => (
@@ -53,8 +53,8 @@ const Footer = () => (
         <Link to="/">
             <Logo />
         </Link>
-        <FooterAuthor href="http://tanaynistala.vercel.app">
-            © 2019 — Tanay Nistala
+        <FooterAuthor href="http://www.tanaynistala.com">
+            © 2020 — Tanay Nistala
             <FooterSpooch className="FooterSpooch" src={spooch} />
         </FooterAuthor>
     </FooterContainer>
